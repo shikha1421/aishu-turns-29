@@ -1,38 +1,55 @@
 /* General Styles */
 body {
-    background: #f2f2f2;
     font-family: 'Rock Salt', cursive;
-    color: #3a3a3a;
+    color: #333;
     margin: 0;
     padding: 0;
-}
-
-/* Flickering Neon Countdown */
-#countdown {
-    text-align: center;
-    font-size: 50px;
-    margin-top: 50px;
-    color: #ff4081;
-    animation: flicker 1s infinite;
-}
-
-@keyframes flicker {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
-}
-
-#countdown-timer {
-    font-size: 2em;
-    font-weight: bold;
-}
-
-/* Slideshow Section */
-.slideshow-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    background-color: #FFEB3B;  /* Vibrant yellow background */
+    background-image: linear-gradient(45deg, #FF4081, #3F51B5);  /* Colorful gradient */
+}
+
+/* Container for Left and Right Sections */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
     margin-top: 50px;
+}
+
+/* Left Side: Letter-like Message Section */
+.message-container {
+    flex: 1;
+    margin-left: 20px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 1.5em;
+}
+
+.letter {
+    background: #F5F5F5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.poem {
+    font-style: italic;
+    color: #4A148C;  /* Dark purple for the poem */
+}
+
+/* Right Side: Slideshow Section */
+.slideshow-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
 }
 
 .polaroid {
@@ -47,18 +64,29 @@ body {
     transform: rotate(0deg);
 }
 
-/* Message Section */
-.message-section {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #333;
+.slide {
+    display: none;  /* Hide slides initially */
 }
 
-.poem {
-    font-style: italic;
-    color: #555;
+/* Countdown Timer */
+#countdown {
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+    margin-top: 50px;
+}
+
+/* Vibrant Neon Countdown */
+#countdown-timer {
+    font-size: 2em;
+    font-weight: bold;
+    animation: flicker 1s infinite;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
 }
 
 /* Background Texture */
